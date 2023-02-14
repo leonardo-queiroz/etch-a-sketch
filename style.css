@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#canvas-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 624px;
+    height: 624px;
+}
+
+#canvas {
+    display: flex;
+    flex-wrap: wrap;
+    border: 12px double black;   
+}
+
+.s-canvas {
+    width: 400px;
+    height: 400px;
+}
+
+.m-canvas {
+    width: 500px;
+    height: 500px;
+}
+
+.l-canvas {
+    width: 600px;
+    height: 600px;
+}
+
+.pixels {    
+    user-select: none;
+    outline: 1px solid black;
+}
+
+#size-options {
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+}
