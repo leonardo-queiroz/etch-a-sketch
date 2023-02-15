@@ -1,6 +1,13 @@
+const body = document.querySelector("body");
 const canvas = document.querySelector("#canvas");
 let canvasWidth = 500;
 let canvasHeight = 500;
+
+const activeColor = document.querySelector("#active-color");
+const canvasColor = document.querySelector("#canvas-color");
+canvasColor.addEventListener("input", function() {
+    canvas.style.backgroundColor = canvasColor.value;
+})
 
 const smallButton = document.querySelector("#small-button");
 smallButton.addEventListener("click", function() {
@@ -28,21 +35,22 @@ largeButton.addEventListener("click", function() {
 });
 
 let squaresPerSide = 50;
-let squaresWidth = 0;
-let squaresHeight = 0;
+let squaresWidth;
+let squaresHeight;
 
 let holdClick = false;
-canvas.addEventListener("mousedown", function() {
+body.addEventListener("mousedown", function() {
     holdClick = true;
 });
-canvas.addEventListener("mouseup", function() {
+body.addEventListener("mouseup", function() {
     holdClick = false;
 })
 
 renderCanvas();
 
 function renderCanvas() {
-    canvas.textContent = "";
+    canvas.textContent = "";  
+
     calculateSquare();
 
     for (let i = 1; i <= squaresPerSide ** 2; i++) {
@@ -66,7 +74,5 @@ function paint(e) {
     if (e.type === "mouseover" && !holdClick) {
         return;
     }
-    e.target.style.backgroundColor = "black";
+    e.target.style.backgroundColor = activeColor.value;
 }
-
-

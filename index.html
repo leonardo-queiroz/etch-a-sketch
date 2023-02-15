@@ -11,7 +11,14 @@
 <body>
     <h1 id="title">Etch-a-Sketch</h1>
     <div id="center-portion">
-        <div id="options"></div>
+        <div id="options">
+            <div id="color-selection">
+                <label for="active-color">Color:</label>
+                <input type="color" id="active-color" value="#000000">
+                <label for="canvas-color">Background:</label>
+                <input type="color" id="canvas-color" value ="#ffffff">
+            </div>
+        </div>
         <div id="canvas-area">
             <div id="canvas" class="m-canvas"></div>
         </div>

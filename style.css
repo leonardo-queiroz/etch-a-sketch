@@ -19,7 +19,7 @@ body {
 #canvas {
     display: flex;
     flex-wrap: wrap;
-    border: 12px double black;   
+    border: 5px solid black;   
 }
 
 .s-canvas {
@@ -38,8 +38,21 @@ body {
 }
 
 .pixels {    
-    user-select: none;
-    outline: 1px solid black;
+    user-select: none;    
+}
+
+#center-portion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #size-options {
