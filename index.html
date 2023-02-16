@@ -18,17 +18,30 @@
                 <label for="canvas-color">Background:</label>
                 <input type="color" id="canvas-color" value ="#ffffff">
             </div>
+            <button class="option-button" id="random-button">Random Mode</button>
+            <button class="option-button" id="grid-button">Grid</button>
+            <button class="option-button" id="eraser-button">Eraser</button>
+            <div class="slider-div" id="brush-size">
+                <p>Brush size:</p>
+                <div class="slider-container" id="brush-slider-div">
+                    <span>S</span>
+                    <input type="range" min="2" max="100" value="50" class="slider" id="brush-slider">
+                    <span>L</span>
+                </div>
+            </div>
+            <div class ="slider-div" id="canvas-size">
+                <p>Canvas size:</p>
+                <div class="slider-container" id="canvas-slider-div">
+                    <span>S</span>
+                    <input type="range" min="300" max="600" value="450" class="slider" id="canvas-slider">
+                    <span>L</span>
+                </div>
+            </div>
         </div>
         <div id="canvas-area">
-            <div id="canvas" class="m-canvas"></div>
+            <div id="canvas"></div>
         </div>
         <div id="reset"></div>
-    </div>
-    <div id="size-options">
-        <p>Adjust Size: </p>
-        <button class="size-button" id="small-button">Small</button>
-        <button class="size-button" id="medium-button">Medium</button>
-        <button class="size-button" id="large-button">Large</button>
     </div>
     <footer></footer>
 </body>
