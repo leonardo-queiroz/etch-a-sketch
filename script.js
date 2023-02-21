@@ -54,11 +54,17 @@ let eraserOn = false;
 const eraserButton = document.querySelector("#eraser-button");
 eraserButton.addEventListener("click", function() {
     if (!eraserOn) {
-        eraserOn = true;
+        eraserOn = true; 
     } else if (eraserOn) {
         eraserOn = false;
     }
 });
+
+const clearButton = document.querySelector("#clear-button");
+clearButton.addEventListener("click", function() {
+    const pixels = document.querySelectorAll(".pixels");
+    pixels.forEach(pixel => pixel.style.backgroundColor = "");
+})
 
 const brushSlider = document.querySelector("#brush-slider");
 brushSlider.addEventListener("change", function() {
@@ -75,6 +81,11 @@ canvasSlider.addEventListener("change", function() {
     renderCanvas();
 })
 
+const clearSlider = document.querySelector("#clear-slider");
+clearSlider.addEventListener("mousemove", function() {
+    const pixelColumn = document.querySelectorAll(`.column-${clearSlider.value}`);
+    pixelColumn.forEach(pixel => pixel.style.backgroundColor = "");
+})
 
 renderCanvas();
 
@@ -86,10 +97,20 @@ function renderCanvas() {
 
     calculateSquare();
 
+    clearSlider.setAttribute("max", squaresPerSide);    
+
+    let pixelCount = 1;
+    let columnCount = 1;
     for (let i = 1; i <= squaresPerSide ** 2; i++) {
         const pixel = document.createElement("div");
         pixel.removeAttribute("class");
         pixel.classList.add("pixels");
+
+        if (pixelCount > (squaresPerSide * columnCount)) {
+            columnCount++;
+        }
+
+        pixel.classList.add(`column-${columnCount}`);        
         
         if (gridOn) {
             pixel.classList.add("pixel-grid");
@@ -100,6 +121,8 @@ function renderCanvas() {
         pixel.addEventListener("mousedown", paint);
         pixel.addEventListener("mouseover", paint);
         canvas.appendChild(pixel);
+
+        pixelCount++;
     };
 }
 

@@ -1,15 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
 :root {
     --brushColor: black;
     --canvasColor: white;
     --canvasWidth: 450px;
     --canvasHeight: 450px;
   }
+
   
 body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    background-color: #F2F3F4;
+    color: #1B1E23;
     margin: 0;
     width: 100vw;
     height: 100vh;
@@ -46,12 +53,12 @@ body {
     background: #d3d3d3;
     border-radius: 5px; 
     outline: none;
-    width: 100%;
+    width: 100%;    
     height: 24px;
 }
 
 #brush-slider {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 #canvas-area {
@@ -64,8 +71,10 @@ body {
 
 #canvas {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    border: 2px solid black;
+    box-shadow: 10px 10px 8px #313639;
+    border: 1px solid black;
     background-color: var(--canvasColor);
     width: var(--canvasWidth);
     height: var(--canvasHeight);
@@ -77,6 +86,14 @@ body {
 
 .pixels {    
     user-select: none;    
+}
+
+#clear-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
 }
 
 #brush-slider::-webkit-slider-thumb {
