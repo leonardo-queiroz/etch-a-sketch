@@ -30,8 +30,15 @@ let randomOn = false;
 const randomButton = document.querySelector("#random-button");
 randomButton.addEventListener("click", function() {
     if (!randomOn) {
+        if(eraserOn) {
+            eraserButton.classList.remove("option-button-active");
+            eraserOn = false;
+        }
+        
+        randomButton.classList.add("option-button-active");
         randomOn = true;
     } else if (randomOn) {
+        randomButton.classList.remove("option-button-active");
         randomOn = false;
     }
 });
@@ -41,10 +48,12 @@ const gridButton = document.querySelector("#grid-button");
 gridButton.addEventListener("click", function() {
     const pixels = document.querySelectorAll(".pixels");
     
-    if (!gridOn) {
+    if (!gridOn) {       
+        gridButton.classList.add("option-button-active");
         gridOn = true;
         pixels.forEach(pixel => pixel.classList.add("pixel-grid"));
     } else if (gridOn) {
+        gridButton.classList.remove("option-button-active");
         gridOn = false;
         pixels.forEach(pixel => pixel.classList.remove("pixel-grid"));
     }
@@ -54,8 +63,14 @@ let eraserOn = false;
 const eraserButton = document.querySelector("#eraser-button");
 eraserButton.addEventListener("click", function() {
     if (!eraserOn) {
+        if(randomOn) {
+            randomButton.classList.remove("option-button-active");
+            randomOn = false;
+        }
+        eraserButton.classList.add("option-button-active");
         eraserOn = true; 
     } else if (eraserOn) {
+        eraserButton.classList.remove("option-button-active");
         eraserOn = false;
     }
 });

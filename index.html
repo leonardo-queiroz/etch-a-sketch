@@ -9,48 +9,58 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
-    <h1 id="title">Etch-a-Sketch</h1>
-    <div id="center-portion">
-        <div id="options">
-            <div id="color-selection">
-                <label for="active-color">Color:</label>
-                <input type="color" id="active-color" value="#1B1E23">
-                <label for="canvas-color">Background:</label>
-                <input type="color" id="canvas-color" value ="#FFFFFF">
+    <div id="top">
+        <h1 id="title"><span>MAGIC</span> Etch A Sketch <span>SCREEN</span></h1>
+    </div>
+    <div id="center">
+        <div id="center-portion">
+            <div id="options">
+                <div id="color-selection">
+                    <p>Brush:</p>
+                    <input class="color-selector" type="color" id="active-color" value="#1B1E23">
+                    <p>Canvas:</p>
+                    <input class="color-selector" type="color" id="canvas-color" value ="#F2F3F4">
+                </div>
+                
+                <button class="option-button" id="random-button">Random Mode</button>
+                <button class="option-button" id="grid-button">Grid</button>
+                <button class="option-button" id="eraser-button">Eraser</button>
+                <button class="option-button" id="clear-button">Clear</button>
+    
+                <div class="slider-div" id="brush-size">
+                    <p>Brush size:</p>
+                    <div class="slider-container" id="brush-slider-div">
+                        <span>S</span>
+                        <input type="range" min="2" max="100" value="50" class="slider" id="brush-slider">
+                        <span>L</span>
+                    </div>
+                </div>
+                <div class ="slider-div" id="canvas-size">
+                    <p>Canvas size:</p>
+                    <div class="slider-container" id="canvas-slider-div">
+                        <span>S</span>
+                        <input type="range" min="300" max="600" value="450" class="slider" id="canvas-slider">
+                        <span>L</span>
+                    </div>
+                </div>
             </div>
-            
-            <button class="option-button" id="random-button">Random Mode</button>
-            <button class="option-button" id="grid-button">Grid</button>
-            <button class="option-button" id="eraser-button">Eraser</button>
-            <button class="option-button" id="clear-button">Clear</button>
+            <div id="canvas-area">
+                <div id="canvas"></div>
+            </div>
+        </div>
 
-            <div class="slider-div" id="brush-size">
-                <p>Brush size:</p>
-                <div class="slider-container" id="brush-slider-div">
-                    <span>S</span>
-                    <input type="range" min="2" max="100" value="50" class="slider" id="brush-slider">
-                    <span>L</span>
-                </div>
-            </div>
-            <div class ="slider-div" id="canvas-size">
-                <p>Canvas size:</p>
-                <div class="slider-container" id="canvas-slider-div">
-                    <span>S</span>
-                    <input type="range" min="300" max="600" value="450" class="slider" id="canvas-slider">
-                    <span>L</span>
-                </div>
+        <div id="reset">
+            <div class ="slider-div" id="clear-div">
+                <p>Slide to clear:</p>                    
+                <input type="range" min="0" max="50" value="0" class="slider" id="clear-slider">   
             </div>
         </div>
-        <div id="canvas-area">
-            <div id="canvas"></div>
-        </div>
     </div>
-    <div id="reset">
-        <div class ="slider-div" id="clear-div">
-            <p>Slide to clear:</p>                    
-            <input type="range" min="0" max="50" value="0" class="slider" id="clear-slider">   
-        </div>
-    </div>
-    <footer></footer>
+
+    <footer>
+        <div></div>
+        <p><a href="https://github.com/leonardo-queiroz" target="_blank" rel="noopener noreferrer">Leonardo Queiroz</a> <span>©</span> 2023</p>
+        <div></div>
+    </footer>
 </body>
 </html>
