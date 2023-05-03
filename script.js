@@ -51,7 +51,7 @@ gridButton.addEventListener("click", function() {
     if (!gridOn) {       
         gridButton.classList.add("option-button-active");
         gridOn = true;
-        pixels.forEach(pixel => pixel.classList.add("pixel-grid"));
+        pixels.forEach(pixel => pixel.classList.add("pixel-grid"));        
     } else if (gridOn) {
         gridButton.classList.remove("option-button-active");
         gridOn = false;
@@ -128,7 +128,7 @@ function renderCanvas() {
         pixel.classList.add(`column-${columnCount}`);        
         
         if (gridOn) {
-            pixel.classList.add("pixel-grid");
+            pixel.classList.add("pixel-grid");      
         }
 
         pixel.style.width = `${squaresWidth}px`;
@@ -143,7 +143,7 @@ function renderCanvas() {
 
 function calculateSquare() {
     squaresWidth = canvasWidth / squaresPerSide;
-    squaresHeight = canvasHeight / squaresPerSide;    
+    squaresHeight = canvasHeight / squaresPerSide;  
 }
 
 function paint(e) {

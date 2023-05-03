@@ -93,7 +93,7 @@ footer span {
     justify-content: center;
     align-items: center;
     font-size: 1.1em;
-    border: 10px solid #5E1916;
+    border: 10px solid #1B1E23;
     padding: 30px 20px;
     border-radius: 20px;
     width: 15vw;
@@ -110,8 +110,8 @@ footer span {
 .color-selector{    
     appearance: none;
     background-color: transparent;
-    width: 60px;
-    height: 60px;
+    width: 4.5em;
+    height: 4.5em;
     border: none;
     cursor: pointer;
 }
@@ -145,6 +145,15 @@ footer span {
 .option-button-active:hover {
     background-color: #5E1916;
     color:#D4AF37;
+}
+
+#random-button {
+    margin-top: 10px;
+}
+
+#clear-button {
+    border-bottom: 2px solid #5E1916;
+    margin-bottom: 10px;
 }
 
 .slider-div {
@@ -192,7 +201,9 @@ footer span {
 }
 
 .pixel-grid {
-    outline: 1px solid #bbbbbb;
+    border-bottom: 1px solid lightslategray;
+    border-right: 1px solid lightslategray;
+    box-sizing: border-box; 
 }
 
 .pixels {    
@@ -205,6 +216,27 @@ footer span {
     align-items: center;
     justify-content: center;
     width: 900px;
+    margin-left: 250px;
+}
+
+#clear-slider::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    background: white; 
+    cursor: pointer;
+    border-radius: 5px;
+    outline: 1px solid black;
+    width: 25px; 
+    height: 25px; 
+}
+  
+#clear-slider::-moz-range-thumb {
+    background: white;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: 1px solid black;
+    width: 25px;
+    height: 25px;
 }
 
 #brush-slider::-webkit-slider-thumb {
