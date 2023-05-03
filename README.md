@@ -1,6 +1,7 @@
 This Etch-A-Sketch project was made for the [The Odin Project](https://www.theodinproject.com/)'s Foundation Course.
 
 --- v1.0 ---
+
 This is an Etch-A-Sketch inspired web drawing board.
 
 Included features:
